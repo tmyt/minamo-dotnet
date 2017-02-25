@@ -1,0 +1,17 @@
+{
+  "name": "dotnet",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "prepare": "mkdir -p tmp && mkdir -p opt && rm opt/*",
+    "download": "curl -sSL -o tmp/dotnet.tar.gz https://go.microsoft.com/fwlink/?LinkID=835021",
+    "extract": "tar zxf tmp/dotnet.tar.gz -C opt/dotnet",
+    "preinstall": "npm run prepare && npm run download && npm run extract",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": "opt/dotnet",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
