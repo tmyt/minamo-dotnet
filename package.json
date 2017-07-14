@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "prepare": "mkdir -p tmp && mkdir -p opt && rm -f opt/*",
+    "prepare": "mkdir -p tmp && mkdir -p opt && rm -rf opt/*",
     "download": "curl -sSL -o tmp/dotnet.tar.gz https://go.microsoft.com/fwlink/?LinkID=835021",
     "extract": "tar zxf tmp/dotnet.tar.gz -C opt",
     "preinstall": "npm run prepare && npm run download && npm run extract",
